@@ -6,7 +6,6 @@
 }
 
 body{
-
     background-color: blueviolet;
 }
 
@@ -63,4 +62,17 @@ body{
     justify-content: flex-end;
     padding: 0 35px;
     border-top: 1px solid black;
+}
+
+.rulesBox .buttons button{
+    margin: 0 5px;
+    height: 30px;
+    width: 100px;
+    border: 1px solid blueviolet;
+    background: blueviolet;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: medium;
+    cursor: pointer;
 }
