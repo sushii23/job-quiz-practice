@@ -28,14 +28,14 @@ body{
     background-color: white;
     cursor: pointer;
 }
-
+/* //whole rule section */
 .rulesBox{
     display: none;
     width: 520px;
     border-radius: 5px;
     background: white;
 }
-
+/* //rule box title */
 .rulesBox .rulesTitle{
     height: 60px;
     width: 100%;
@@ -55,7 +55,7 @@ body{
     margin: 5px 0;
     font-size: 13px;
 }
-
+/* //bottom of rule box */
 .rulesBox .buttons{
     height: 60px;
     display: flex;
@@ -64,7 +64,7 @@ body{
     padding: 0 35px;
     border-top: 1px solid black;
 }
-
+/* //styling the buttons on bottom of rule box  */
 .rulesBox .buttons button{
     margin: 0 5px;
     height: 30px;
