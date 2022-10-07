@@ -5,4 +5,13 @@
   transform: translate(-50%, -50%);
 }
 
+/* //start button style  */
+.start button {
+    font-size: 25px;
+    font-weight: medium;
+    color: blue;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
