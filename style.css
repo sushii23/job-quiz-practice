@@ -97,14 +97,17 @@ body{
     color: white;
     border-color: blueviolet;
 }
-
+/* quiz section */
 .quizBox{
+    display: none;
     width: 550px;
     background: white;
     border-radius: 5px;
 }
 
 .quizBox header{
+    position: relative;
+    z-index: 99;
     height: 70px;
     padding: 0 30px;
     background: white;
@@ -155,7 +158,107 @@ body{
 }
 
 .quizBox section{
-    
+    padding: 25px 30px 20px 30px;
+    background: white;
+}
 
+.quizBox section .getText{
+    font-size: 25px;
+    font-weight: 600;
+}
 
+.quizBox section .answerList{
+    padding: 20px 0;
+    display: block;
+}
+
+section .answerList .answer{
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3 ease;
+}
+
+section .answerList .answer:hover{
+    color: #004085;
+    background: white;
+    background-color: #b8daff;
+}
+
+.answerList .answer:last-child{
+    margin-bottom: 0px;
+}
+
+.answerList .answer .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+
+}
+
+.answerList .answer .icon.tick{
+    color: #23903c;
+    border-color: #23903c;
+    background: #d4edda;
+}
+
+.answerList .answer .icon.cross{
+    color: red;
+    background: #f8d7da;
+    border-color: red;
+
+}
+
+.quizBox footer{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.quizBox footer .numQuest span{
+    display: flex;
+    user-select: none;
+}
+
+footer .numQuest span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.numQuest span p:first-child{
+    padding-left: 0px;
+}
+
+footer .next_btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: white;
+    background: #007bff;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .next_btn:hover{
+    background: #0263ca;
 }
