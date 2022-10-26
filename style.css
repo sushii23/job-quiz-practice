@@ -133,3 +133,29 @@ body{
     border-radius: 5px;
     padding: 0 8px;
 }
+
+.quizBox header .timer .timeText{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quizBox header .timer .timerLen{
+    font-size: 18px;
+    font-weight: 500;
+    background: black;
+    height: 30px;
+    width: 45px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    user-select: none;
+}
+
+.quizBox section{
+    
+
+
+}
