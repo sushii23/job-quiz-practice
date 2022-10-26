@@ -12,7 +12,7 @@ body{
 
 .startb,
 .rulesBox,
-.quizbox{
+.quizBox{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,3 +98,38 @@ body{
     border-color: blueviolet;
 }
 
+.quizBox{
+    width: 550px;
+    background: white;
+    border-radius: 5px;
+}
+
+.quizBox header{
+    height: 70px;
+    padding: 0 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:5px 5px 0 0;
+    
+
+}
+
+.quizBox header .title{
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.quizBox header .timer{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 140px;
+    height: 40px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0 8px;
+}
