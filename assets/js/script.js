@@ -1,7 +1,24 @@
-const startb = document.querySelector(".startb");
-const timerDiv = document.querySelector(".timer");
-const timeSpan = document.querySelector(".time");
-const questionsDiv = document.querySelector("questions");
+const startb = document.querySelector(".startb button");
+const rulesBox = document.querySelector(".rulesBox");
+const exit_btn = document.querySelector(".buttons .quit");
+const con_btn = document.querySelector(".buttons .restart");
+const quiz_box = document.querySelector(".quizBox");
+
+// when start is clicked//
+startb.onclick = () => {
+    rulesBox.classList.add("activeInfo"); //shows info//
+}
+
+// when exit is clicked//
+exit_btn.onclick = () => {
+    rulesBox.classList.remove("activeInfo");//hides info//
+}
+
+// when continue is clicked//
+con_btn.onclick = () => {
+    rulesBox.classList.remove("activeInfo");//hides info//
+    quiz_box.classList.add("activeQuiz");//shows quiz part//
+}
 
 
 const questions = [
