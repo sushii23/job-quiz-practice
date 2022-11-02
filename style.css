@@ -12,7 +12,8 @@ body{
 
 .startb,
 .rulesBox,
-.quizBox{
+.quizBox,
+.result_box{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -261,4 +262,16 @@ footer .next_btn{
 
 footer .next_btn:hover{
     background: #0263ca;
+}
+
+.result_box{
+    background: white;
+    width: 400px;
+    padding: 20px 25px;
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 }
