@@ -11,6 +11,8 @@
 </head>
 <body>
     <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">0</span></div>
     <!-- //start button// -->
     <div class="startb"><button>Start Quiz</button></div>
     
@@ -37,7 +39,7 @@
    <!-- //quiz box section -->
    <div class="quizBox">
         <header>
-            <button><div class="title">View High score</div></button>
+            <button><div class="title">Quiz</div></button>
             <div class="timer">
                 <div class="timeText">Time Left:<span id="time">60</span></div>
                 <div class="timerLen">60</div>
@@ -84,6 +86,19 @@
             <div class="score_text">
                 <!-- Here I've inserted Score Result from JavaScript -->
             </div>
+
+            <div id="end-screen" class="hide">
+                <h2>All done!</h2>
+                <p>Your final score is <span id="final-score"></span>.</p>
+                <p>
+                  Enter initials: <input type="text" id="initials" max="3" />
+                  <button id="submit">Submit</button>
+                </p>
+              </div>
+        
+              <div id="feedback" class="feedback hide"></div>
+            </div>
+            
             <div class="buttons">
                 <button class="restart">Replay Quiz</button>
                 <button class="quit">Quit Quiz</button>
