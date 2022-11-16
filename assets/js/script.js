@@ -18,32 +18,26 @@ exit_btn.onclick = () => {
 con_btn.onclick = () => {
     rulesBox.classList.remove("activeInfo");//hides info//
     quiz_box.classList.add("activeQuiz");//shows quiz part//
+    showQuestions(3);
+}
+
+let que_count = 0;
+
+// get the questions from array//
+function showQuestions(index){
+    const que_text = document.querySelector(".que_text");
+    const choices_list = document.querySelector(".choicesList");
+    let que_tag = "<span>"+questions[index].question +"</span>";
+    let choices_tag = "<div class='choices'>"+ questions[index].choices[0] +"<span></span></div>"
+                    "<div class='choices'>"+ questions[index].choices[1] +"<span></span></div>"
+                    "<div class='choices'>"+ questions[index].choices[2] +"<span></span></div>"
+                    "<div class='choices'>"+ questions[index].choices[3] +"<span></span></div>";
+    que_text.innerHTML = que_tag;
+    choices_list.innerHTML = choices_tag;
+
 }
 
 
-const questions = [
-    {
-        Text: "Test question 1",
-        choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
-        answer: "answer 1"
-    },
-    {
-        Text: "Test question 2",
-        choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
-        answer: "answer 1"
-    },
-    {
-        Text: "Test question 3",
-        choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
-        answer: "answer 1"
-    },
-    {
-        Text: "Test question 1",
-        choices: ["answer 1", "answer 2", "answer 3", "answer 4"],
-        answer: "answer 1"
-    }
-
-];
 
 let questionIndex = 0;
 let time =60;
