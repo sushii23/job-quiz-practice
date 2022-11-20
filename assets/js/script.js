@@ -1,3 +1,8 @@
+
+let questionIndex = 0;
+let time =60;
+let quizTimer;
+
 const startb = document.querySelector(".startb button");
 const rulesBox = document.querySelector(".rulesBox");
 const exit_btn = document.querySelector(".buttons .quit");
@@ -18,10 +23,19 @@ exit_btn.onclick = () => {
 con_btn.onclick = () => {
     rulesBox.classList.remove("activeInfo");//hides info//
     quiz_box.classList.add("activeQuiz");//shows quiz part//
-    showQuestions(3);
+    showQuestions(0);
 }
 
 let que_count = 0;
+
+const next_btn=quiz_box.querySelector(".next_btn")
+
+//when you click the next button//
+next_btn.onclick = () =>{
+    que_count++;
+    showQuestions(que_count);
+    que_count - 1
+}
 
 // get the questions from array//
 function showQuestions(index){
@@ -38,10 +52,6 @@ function showQuestions(index){
 }
 
 
-
-let questionIndex = 0;
-let time =60;
-let quizTimer;
 
 const startQuiz = () => {
       quizTimer = setInterval(function() {  
