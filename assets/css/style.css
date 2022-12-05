@@ -361,19 +361,7 @@ section .answerList .answer:hover{
 
 }
 
-.quizBox footer .numQuest span{
-    display: flex;
-    user-select: none;
-}
 
-footer .numQuest span p{
-    font-weight: 500;
-    padding: 0 5px;
-}
-
-.numQuest span p:first-child{
-    padding-left: 0px;
-}
 
 footer .next_btn{
     height: 40px;
@@ -386,6 +374,7 @@ footer .next_btn{
     background: #007bff;
     border-radius: 5px;
     border: 1px solid #007bff;
+    margin-left: 85%;
     cursor: pointer;
     transition: all 0.3s ease;
 }
