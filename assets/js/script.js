@@ -54,4 +54,32 @@ for (var i = 0; i <presentQuestion.choices.length; i++) {
 }
 }
 
+function questionClick(event) {
+  var buttonEL = event.target;
+// do nothing if you clcik an element that is not a choice button//
+  if (!buttonEL.matches(".choice")) {
+    return;
+  }
+// looks for the wrong answer//
+  if (buttonEL.value !== questions[presentQuestionIndex].answer) {
+// this is how you take away the time //
+    time -= 15;
+
+    if (time < 0) {
+      time = 0;
+    }
+// display the new time//
+    timerEL.textContent = time;
+
+    feedbackEL.textContent = "Incorrect";
+
+  } else {
+   feedbackEL.textContent = "Correct";
+  }
+  
+
+
+
+
+}
 
