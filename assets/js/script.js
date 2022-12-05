@@ -76,10 +76,21 @@ function questionClick(event) {
   } else {
    feedbackEL.textContent = "Correct";
   }
-  
+  //  show correct or incorrect on page//
+  feedbackEL.setAttribute("class", "feedback");
+  setTimeout(function () {
+    feedbackEL.setAttribute("class" , " feedback hide");
+  }, 1000);
 
+  // how to go to the next question//
+  presentQuestionIndex++;
 
-
-
+  //check if there are more questions,if time runs out then quiz is over//
+  if (time <=0 || presentQuestionIndex === questions.length) {
+    quizEnd();
+ } else {
+  getQuestion();
+ }
 }
+
 
