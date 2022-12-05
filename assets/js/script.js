@@ -93,4 +93,19 @@ function questionClick(event) {
  }
 }
 
+function quizEnd() {
+// clear the timer//
+clearInterval(timerID);
+
+// pull up the end screen//
+var endScreenEl = document.getElementById("endScreen");
+endScreenEl.removeAttribute("class");
+
+//post final score //
+var finalScoreEl = document.getElementById("finalScore");
+finalScoreEl.textContent = time;
+
+// get rid of questions section//
+questionsEL.setAttribute("class", "hide");
+}
 
