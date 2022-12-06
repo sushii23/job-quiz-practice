@@ -145,3 +145,19 @@ function saveHighscore {
   }
 }
 
+function checkForEnter(event) {
+ if(event.key === "Enter") {
+  saveHighscore();
+ }
+}
+//clicks button to submit initials//
+submit_btn.onclick = saveHighscore;
+
+//click button to start quiz//
+start_btn.onclick = startQuiz;
+
+//clicks on element with the choices//
+choicesEL.onclick = questionClick;
+
+initialsEL.onkeyup = checkForEnter;
+
