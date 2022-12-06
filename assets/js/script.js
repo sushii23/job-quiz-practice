@@ -85,7 +85,7 @@ function questionClick(event) {
   // how to go to the next question//
   presentQuestionIndex++;
 
-  //check if there are more questions,if time runs out then quiz is over//
+  //check if there are more questions//
   if (time <=0 || presentQuestionIndex === questions.length) {
     quizEnd();
  } else {
@@ -107,5 +107,41 @@ finalScoreEl.textContent = time;
 
 // get rid of questions section//
 questionsEL.setAttribute("class", "hide");
+}
+
+function clockTick() {
+  // update time//
+  time--;
+  timerEL.textContent = time;
+
+  //check if time ran out//
+  if (time <= 0) {
+    quizEnd();
+  }
+}
+
+function saveHighscore {
+  //get value of input box//
+  var initials = initialsEL.value.trim();
+
+  //make sure value isn't empty//
+  if (initials !== "") {
+    //get saved scores from localstorage, or if not any,set to empty array
+    var highscores =
+    JSON.parse(window.localStorage.getItem("higscores")) || [];
+    
+    //make a new score for current user //
+    var newScore = {
+      score: time,
+      initials: initials,
+    };
+
+    //save to local storage //
+    highscores.push(newScore);
+    window.localStorage.setItem("highscores", JSON.stringify(highscores));
+
+    //move to highscores page//
+    window.location.href = "highscores.html";
+  }
 }
 
