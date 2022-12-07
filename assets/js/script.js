@@ -34,8 +34,8 @@ function getQuestion() {
 // get the present question//
 var presentQuestion = questions[presentQuestionIndex];
 // update title each time there's a new question//
-var titleEl = document.getElementById("questionTitle");
-titleEl.textContent = presentQuestion.title;
+var headerQEl = document.getElementById("question-headerQ");
+headerQEl.textContent = presentQuestion.headerQ;
 
 // remove the old questions//
 choicesEL.innerHTML = "";
@@ -120,7 +120,7 @@ function clockTick() {
   }
 }
 
-function saveHighscore {
+function saveHighscore() {
   //get value of input box//
   var initials = initialsEL.value.trim();
 
